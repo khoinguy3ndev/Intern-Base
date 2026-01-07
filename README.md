@@ -76,3 +76,42 @@
 4. Advanced:
   - FormData: Xử lý upload file và dữ liệu form thông qua lập trình.
   - XML Request: Là công cụ xử lý request, xử lý định dạng XML cũ.
+
+# TypeScript
+1. Understand what is TypeScript and how it works:
+  - Khái niệm: TypeScript là một superset của JavaScript, bổ sung static typing (kiểu tĩnh). TS Code được biên dịch thành JS thuần để chạy.
+  - Advantages:
+    + Static Typing: Giúp phát hiện lỗi ngay lúc compile thay vì lúc chạy runtime.
+    + IntelliSense: Code suggestion và auto-completion mạnh mẽ.
+    + Hỗ trợ tốt cho dự án lớn, OOP và Modular.
+  - Features: Static Types, ES6+ Support, Classes, Modules, Interfaces, Generics.
+2. Data Types and Core Concepts:
+  - Basic Data Types: string, number, boolean, null, undefined, symbol.
+  - Special Types:
+    + void: Dùng cho hàm không trả về giá trị.
+    + never: Dùng cho hàm bắn lỗi hoặc lặp vô tận.
+    + any: Tắt kiểm tra kiểu (bypass), cho phép gán mọi thứ (nên hạn chế).
+    + unknown: Giống any nhưng an toàn hơn, bắt buộc phải kiểm tra kiểu trước khi thao tác.
+    + undefine: undefined là một giá trị cụ thể, thường được dùng khi biến chưa được gán, hàm không trả về gì hoặc optional
+  - Type annotations: Cú pháp : Type để khai báo kiểu rõ ràng. VD: let count: number = 5;.
+  - Type inference: TS tự động suy luận kiểu nếu không khai báo. VD: let x = 10 -> x là number.
+  - Type assertion: Ép kiểu với từ khóa as. VD: let len = (someValue as string).length;.
+3. Interface, Type, Enum:
+  - Interface: Dùng để định nghĩa cấu trúc của Object. Hỗ trợ extends, implements và có thể gộp khai báo.
+  - Type Alias: Dùng định nghĩa mọi loại kiểu (Object, Primitive, Union, Intersection, Tuple).
+  - Enum: Định nghĩa tập hợp các hằng số có tên VD: enum Role { Admin, User }.
+4. Type Operators & Utilities:
+  - keyof: Lấy danh sách các keys của một Type dưới dạng Union. VD: type PKeys = keyof Person;.
+  - typeof: Lấy kiểu dữ liệu của một biến/object đã tồn tại. VD: type User = typeof userObj;.
+  - Utility Types phổ biến như:
+    + Partial<T>: Biến tất cả thuộc tính của T thành optional.
+    + Required<T>: Biến tất cả thuộc tính thành bắt buộc.
+    + Omit<T, K>: Loại bỏ các thuộc tính K khỏi T.
+    + Pick<T, K>: Chỉ lấy các thuộc tính K từ T.
+    + Record<K, V>: Tạo object type với key K và value V.
+5. OOP and other:
+  - OOP: Classes, Interfaces, Inheritance.
+  - Modifiers: public, private , protected, readonly.
+  - Abstract class: Lớp trừu tượng, không thể khởi tạo đối tượng, dùng làm class cha cho các class khác kế thừa.
+  - Generic Type <T>: Cho phép viết code linh hoạt làm việc với nhiều kiểu dữ liệu khác nhau mà vẫn giữ type-safe. VD: class Box<T> { value: T; }.
+  - Decorators: Cú pháp @Function dùng để thêm metadata hoặc thay đổi hành vi của class, method, property.
