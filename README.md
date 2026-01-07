@@ -115,3 +115,7 @@
   - Abstract class: Lớp trừu tượng, không thể khởi tạo đối tượng, dùng làm class cha cho các class khác kế thừa.
   - Generic Type <T>: Cho phép viết code linh hoạt làm việc với nhiều kiểu dữ liệu khác nhau mà vẫn giữ type-safe. VD: class Box<T> { value: T; }.
   - Decorators: Cú pháp @Function dùng để thêm metadata hoặc thay đổi hành vi của class, method, property.
+    + Class Decorator: Áp dụng cho các class.
+    + Method Decorator: Áp dụng cho các method của class.
+    + Property Decorator: Áp dụng cho các property của class.
+    + Parameter Decorator: Áp dụng cho các parameter của method trong class
